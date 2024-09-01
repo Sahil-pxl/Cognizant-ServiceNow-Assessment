@@ -1,0 +1,75 @@
+ServiceNow Reporting Tutorial: A Comprehensive Overview
+
+Introduction
+
+In the realm of ServiceNow, understanding data is crucial for mastering the platform. This approach, termed 
+"data-driven analysis and learning," involves leveraging the underlying database tables to grasp the full 
+functionality of ServiceNow. This document provides an in-depth overview of ServiceNow’s reporting capabilities, 
+designed to help you create, manage, and effectively utilize reports within the platform.
+
+ServiceNow Reporting Capabilities
+
+ServiceNow's reporting functionality is anchored in its database structure, primarily revolving around the 
+sys_report table. This system table holds records for each report created in the instance, making it the 
+central hub for report management.
+
+1. Understanding the Core Tables
+
+sys_report Table: This is the fundamental table where each report is stored. Key fields within this table include:
+
+    Title: The name of the report.
+    Table: The database table that the report pulls data from.
+    Source Type: Indicates if the data comes from a table or a data source.
+    Report Source: When the source type is a data source, this field specifies the saved query to be used.
+    Filter: Defines any conditions to narrow down the data in the report.
+    Type: Specifies the report’s visualization format (e.g., pie chart, bar chart).
+
+Supporting Tables:
+
+Report Source Table: Stores reusable queries that can be applied to reports.
+Scheduled Email Reports Table (sys_auto_report): Manages automated report executions and their email distribution.
+Report Users and Groups Table (sys_report_users_groups): Controls access to reports by individual users or groups.
+Dashboard Table (pa_dashboard): Facilitates adding reports to dashboards for combined data visualization.
+2. Creating Reports
+
+There are multiple methods to create reports in ServiceNow:
+
+Reports Application: Accessible via the Application Navigator, this method involves populating fields such as 
+the report title, source type, and table. You then configure the type of visualization and additional settings 
+like grouping and styling.
+
+ServiceNow Studio: In Studio, select the application scope, navigate to File > Create File, choose Reporting, 
+and proceed to define your report’s parameters.
+
+From a List View: Start by viewing records from a source table (e.g., sys_user.list), then use the column context
+menu to generate a report directly from this data.
+
+3. Managing Reports
+
+Once a report is created, it can be managed through:
+
+Editing Reports: Open the report to make modifications as needed.
+Scheduling Reports: Using the Scheduled Email Reports Table, set up reports to run on a recurring schedule and 
+email them to designated users or groups. Configure settings such as the report’s recurrence, time, and format 
+(PDF, Excel, etc.).
+
+4. Sharing Reports
+
+Reports can be shared via:
+
+Sharing Icon: Within the report’s interface, use the sharing icon to distribute the report to users or groups, 
+or share it globally.
+Scheduled Email: Set up scheduled email deliveries to ensure that reports reach intended recipients automatically.
+
+5. Adding Reports to Dashboards
+
+To enhance data visibility, reports can be added to dashboards. This can be done by either starting from a 
+dashboard and adding the report or by using the report’s interface to add it directly to a selected dashboard.
+
+Conclusion
+
+Mastering ServiceNow’s reporting capabilities involves understanding its database tables and leveraging the 
+various tools and methods available for creating, managing, and sharing reports. By effectively utilizing these 
+features, you can present data in a meaningful way and enhance decision-making processes within your organization. 
+Whether preparing for the CSA certification or aiming to excel in data presentation, this guide provides a solid 
+foundation for achieving proficiency in ServiceNow reporting.

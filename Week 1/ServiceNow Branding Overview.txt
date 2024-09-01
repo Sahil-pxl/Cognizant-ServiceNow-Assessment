@@ -1,0 +1,71 @@
+ServiceNow Branding Overview: A Brief Guide
+
+Introduction
+
+In the journey of mastering the ServiceNow platform, understanding how to customize and brand the interface
+to reflect your organization's identity is crucial. Branding within ServiceNow allows you to transform the
+default, out-of-the-box user interface into one that aligns with your corporate identity.This guide summarizes 
+the key points from a ServiceNow training session focused on branding,giving you practical insights on how to
+effectively personalize your ServiceNow instance.
+
+What is Branding in ServiceNow?
+
+Branding in ServiceNow refers to the process of customizing the user interface to reflect your organization's
+colors, logos, fonts, and overall aesthetic. The goal is to make users feel comfortable and confident while 
+navigating the platform, as it mirrors the familiar look and feel of other applications they might use within
+the company. Branding can also aid in faster adoption of the platform by making the interface more intuitive 
+and aligned with the users' expectations.
+
+Why Branding Matters.
+
+Fostering a Shared Identity: Customizing ServiceNow to match your corporate branding helps create a unified 
+identity across all platforms used within the company.
+
+Enhancing User Comfort and Confidence:A branded interface feels more like an internal tool,making users more
+at ease and likely to engage with the platform.
+
+Promoting Platform Adoption: A familiar and well-designed interface can encourage quicker adoption and more 
+frequent use of the platform.
+
+Guided Setup in ServiceNow
+
+ServiceNow provides guided setup wizards that help administrators configure various aspects of the platform,
+including branding.These wizards simplify the setup process by breaking it down into manageable steps,ensuring
+that all necessary configurations are completed.
+
+Key Types of Guided Setup
+
+ITSM Guided Setup: Focuses on IT Service Management and includes wizards for configuring the company’s overall
+look and feel, as well as foundational data, incident management, problem management, and more.
+ITOM Guided Setup:Pertains to IT Operations Management and includes wizards for setting up mid servers,discovery,
+event management, operational intelligence, and cloud provisioning.
+Hands-On Branding: A Walkthrough
+The session provided a practical demonstration of how to customize the branding of a ServiceNow instance using
+the ITSM Guided Setup. Here's a step-by-step summary of what was covered:
+
+Accessing the Guided Setup:
+
+Navigate to the application navigator and type "guided setup."
+Select the "ITSM Guided Setup" module to start the branding process.
+System Configuration:
+
+Customize the Page Header Caption: Change the default “Service Management” text to something more personalized,
+like the company name.
+Modify the Browser Tab Title: Update the text that appears on the browser tab for all users.
+Upload a Banner Image: Replace the default ServiceNow logo with your company’s logo.
+Adjust Date and Time Formats: Set the formats to align with your company’s standards.
+Change Banner Text Colors: Customize the colors to match your brand’s color scheme.
+Welcome Page Configuration:
+
+The welcome page is what users see when they first log in. It includes fields for username and password, along 
+with any welcome messages.
+Add a custom welcome message that might include important notices or just a friendly greeting.
+Additional Branding Tools
+Aside from the guided setup wizards, ServiceNow also offers other tools for further personalization:
+
+Service Portal: A widget-based tool that allows for the creation of customized user interfaces by arranging 
+widgets on a page. This can also be branded to match the corporate look.
+UI Builder:A more advanced tool that functions similarly to a WYSIWYG editor.It allows you to design functional 
+screens with buttons, headings, and report sections,providing further opportunities to brand and personalize the
+user experience.
+

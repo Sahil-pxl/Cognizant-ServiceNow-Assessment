@@ -1,0 +1,78 @@
+Importing Data into ServiceNow: Transform Maps and Field Maps
+
+Introduction
+This document provides an overview of the process for importing data into ServiceNow using Transform Maps and
+Field Maps. It is intended to follow a series of notes on data importation into ServiceNow. For those new to 
+this topic, it is beneficial to review earlier notes on creating and testing data sources to understand the 
+complete workflow.
+
+Data Source Overview
+In previous notes, we established a data source in ServiceNow. This step involves defining the source data entity,
+configuring the connection, and naming the staging table. The staging table temporarily holds data before it is 
+moved to the final destination. Testing the data source confirmed the connection and validated that the staging 
+table was populated correctly.
+
+Transform Maps and Field Maps
+Field Maps
+
+Field Maps are used to specify how data should be transferred from the staging table to the target table. This
+process involves mapping individual fields from the staging table to corresponding fields in the target table. 
+Each field mapping is stored as a record in the Field Map table, which is labeled "Field Map" in the ServiceNow 
+interface. The actual table name is cis_transform_entry.
+
+To access this table, navigate to cis_transform_entry.list. Initially, this table will be empty until field 
+mappings are created.
+
+Transform Maps
+
+A Transform Map serves as a grouping mechanism for Field Maps. It consolidates multiple field mappings into a
+single unit, facilitating the data import process.Transform Maps are stored in the "Transform Map" table,which
+has the label "Transform Map" and the actual table name cis_transform_map.
+
+To create a new Transform Map:
+
+Go to cis_transform_map.list and click on "New."
+Enter a name for the Transform Map, such as "Test Transform Map."
+Specify the source table (the staging table created earlier) and the target table.
+The Transform Map is linked to both the staging and target tables. Once created, additional tools and options
+are available for configuring field mappings.
+
+Creating Field Maps
+Manual Creation: Field Maps can be manually created by specifying the source and target fields for each mapping.
+Mapping Assistant: For ease of use, ServiceNow provides a Mapping Assistant tool that facilitates automatic field
+mapping. This tool displays fields from both the source and target tables, allowing for a straightforward mapping 
+process.
+
+Using the Mapping Assistant:
+
+Open the Mapping Assistant from the Transform Map record.
+Map each source field to the corresponding target field.
+Click "Save" to record each field mapping.
+Example: Map fields like name, address, city, state, and zip from the staging table to the target table fields 
+username, address, city, state, and zip code, respectively.
+
+Coalesce Field
+The coalesce field helps prevent duplicate records during the import process. It specifies which field(s) should
+be used to match records between the staging table and the target table. The concept of "coalesce" means to come
+together to form a unified whole. In database terms, it is akin to a primary key.
+
+To set the coalesce field:
+
+Navigate to the Field Map record.
+Select the field to be used for matching (e.g., name).
+Check the "Coalesce" option.
+Note: Using fields with unique values as the coalesce field is ideal. In this example, name is used, but it might
+not be unique.
+
+Verification and Testing
+After setting up Transform Maps and Field Maps:
+
+Verify Field Maps: Check the cis_transform_entry table to ensure all field mappings are correctly listed.
+Verify Transform Map: Review the cis_transform_map table to confirm the creation of the Transform Map and its 
+associated Field Maps.
+
+Conclusion
+By following these steps, you will have established a complete data import process in ServiceNow, from creating
+the data source to mapping and importing data.The next steps will involve testing the import to ensure data flows 
+correctly from the source to the target table and exploring options for scheduling recurring imports.
+

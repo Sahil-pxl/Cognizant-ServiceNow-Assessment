@@ -1,0 +1,74 @@
+ServiceNow Incident Management Tutorial and Task Administration
+Introduction
+ServiceNow’s core functionality revolves around task management, designed to streamline work processes and 
+enhance efficiency. In this tutorial, we delve into how ServiceNow handles tasks, particularly focusing on 
+incidents, change requests, and problem records.
+
+Core Concepts
+Definition of a Task
+In ServiceNow, a task represents an item of work that needs completion. This task is stored as a record in the 
+Task Table, a fundamental component of the ServiceNow platform. Common attributes of a task include a description,
+ status, due date, and an assigned person or group.
+
+Hierarchical Database Design
+ServiceNow employs a hierarchical database design for tasks. The Task Table acts as a parent table from which 
+other tables, such as Change Request, Incident, and Problem, inherit. These child tables extend the Task Table
+to include additional attributes specific to their respective tasks.Thus, records are created in these extended 
+tables rather than directly in the Task Table.
+
+Business Value and Task Management
+ServiceNow’s task management capabilities are designed to improve process efficiency through:
+
+Assignment Rules: Automatically assign tasks to users or groups based on predefined conditions.
+Approvals: Manage approval processes either manually or automatically.
+Service Level Agreements (SLAs): Track task completion times to ensure timely processing.
+Inactivity Monitors: Notify users when tasks remain untouched for a specified duration.
+Workflows: Create and apply workflows to automate task handling based on specific conditions.
+Task Assignment
+Assigning Tasks
+Tasks can be assigned using the ‘Assigned To’ and ‘Assignment Group’ fields. The ‘Assigned To’ field designates 
+a specific user, while the ‘Assignment Group’ field assigns tasks to a group of users. Groups are configured in 
+the Group Table, and users are managed in the User Table.
+
+Assignment Rules
+Assignment rules automate task assignment.Stored in the table sysrule_assignment,these rules consist of conditions
+that dictate how tasks should be assigned. For example, if an incident pertains to hardware issues, it might 
+automatically be assigned to the Hardware Support Group and a specific user, such as Abraham Lincoln.
+
+Creating and Testing Assignment Rules
+To create a new assignment rule, specify the table (e.g., Incident), set conditions (e.g., category equals 
+hardware),and define the assignment details. Once created, you can test the rule by generating a new incident
+ that meets the conditions. The task should be automatically assigned based on the rule settings.
+
+User Interaction with Tasks
+Service Desk Application
+Users can view tasks assigned to themselves or their groups using the Service Desk application. Options include
+“My Work” for individual tasks and “My Group’s Work” for group tasks. Tasks can be assigned or reassigned 
+manually through these views.
+
+Collaboration Tools
+ServiceNow provides tools for effective task collaboration:
+User Presence: Indicates if multiple users are viewing the same record.
+Real-Time Editing: Updates records in real-time as changes are made by other users.
+Activity Stream: Provides a log of changes and notes related to the record.
+Visual Task Boards
+Overview
+Visual Task Boards offer a graphical interface for task management, allowing users to view tasks in a 
+drag-and-drop format. This visual approach helps in identifying bottlenecks and organizing tasks more 
+intuitively.
+
+Types of Visual Task Boards
+
+Guided Boards: Created from lists using predefined field values as lanes.
+Flexible Boards: Also created from lists, but lanes are based on attributes without predefined values.
+Freeform Boards: Not tied to existing task records and can be customized for personal task management.
+
+Creating Visual Task Boards
+To create a board, navigate to a list of tasks, select an attribute for lanes, and choose the visual task 
+board option. Guided boards adjust task values when cards are moved, while flexible boards do not alter the 
+underlying task data.
+
+Conclusion
+Understanding ServiceNow’s task management features, including assignment rules, user collaboration, and 
+visual task boards, is crucial for effectively using the platform. Mastery of these tools can significantly 
+enhance task handling efficiency and overall workflow management.
