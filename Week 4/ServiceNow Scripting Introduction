@@ -1,0 +1,74 @@
+Introduction to ServiceNow Scripting
+ServiceNow Scripting is essential for those aiming to develop custom solutions, automate processes, and enhance the overall functionality of the platform. 
+This guide covers the basics of both Client-Side and Server-Side Scripting, providing a clear understanding of how scripting fits into different parts of ServiceNow.
+
+Scripting in ServiceNow
+ServiceNow scripting is divided into two key categories:
+
+Client-Side Scripting – Executed on the user’s browser, focusing on interactions with forms, UI elements, and real-time changes.
+Server-Side Scripting – Executed on the server, dealing with databases, business logic, and backend processes.
+Mastering these two sides of scripting enables you to handle almost every development task within ServiceNow, from building catalog items to creating integrations 
+and automating processes.
+
+Client-Side Scripting
+Client-side scripts are primarily used to manage the front-end aspects of ServiceNow, such as forms and UI elements. For example, you might 
+want to hide or show fields dynamically, auto-populate values, or validate user inputs before sending data to the server.
+
+Common client-side scripts include:
+
+Client Scripts: Perform real-time form manipulation, such as hiding fields or changing values.
+UI Policies: Dynamically control the appearance and behavior of form elements based on set conditions.
+Example use cases:
+
+Form Modifications: Changing form fields dynamically when certain criteria are met (e.g., hiding a field when a specific option is selected).
+Auto-Population: Populating fields like the current user’s name or email based on the logged-in user.
+Server-Side Scripting
+Server-side scripts handle the behind-the-scenes data processing, including querying databases, modifying records, and managing workflows.
+Whenever a process requires interaction with the database or the platform’s core logic, server-side scripting is used.
+
+Common server-side scripts include:
+
+Business Rules: Automatically execute server-side logic when records are created, updated, or deleted.
+Script Includes: Reusable scripts that can be called from other scripts within the platform.
+ACL Scripting: Controls access to records and data within the system.
+Example use cases:
+
+Database Queries: Retrieving data from the database and populating fields based on query results.
+Business Logic Execution: Automatically updating fields or sending notifications when certain conditions are met.
+Client vs. Server: How to Decide?
+One of the most common questions is how to determine when to use client-side or server-side scripting. Here’s a quick guide:
+
+Client-Side: Used for form manipulation, UI controls, and instant user interactions. If the task involves visible elements in the browser 
+(e.g., hiding fields, enabling/disabling buttons), it's done client-side.
+Server-Side: Used for querying databases, managing workflows, and processing records. Anything involving back-end data that the user does
+not see directly should be handled server-side.
+Example scenario:
+
+If you need to auto-populate a user’s name on a form based on their login, this can be done with client-side scripts. However, if you need to
+retrieve data from the user table and perform calculations, that’s a job for server-side scripts.
+Scripting Modules in ServiceNow
+The key scripting modules in ServiceNow include:
+
+Client Scripts: JavaScript that runs on forms to manipulate the UI.
+Business Rules: Server-side logic that runs whenever records are created, updated, or deleted.
+Script Includes: Server-side scripts used to store reusable functions.
+UI Actions: Used to add buttons, links, or context menu items that execute code when clicked.
+Catalog Client Scripts: Scripts specific to catalog items, allowing real-time field manipulation within service catalog forms.
+Advanced Topics
+For those looking to dive deeper into ServiceNow scripting, the following advanced topics are also covered:
+
+GlideRecord: A powerful API used to query, insert, update, and delete records in the database.
+Email Scripting: Automate email notifications based on system events or record updates.
+Scheduled Jobs and Script Includes: Automate routine tasks, such as sending reports or updating records at regular intervals.
+Example: Client-Side and Server-Side Interaction
+Let’s consider an example where you want to auto-populate the caller ID field on a form.
+
+Client-Side Script: You can set a client script to auto-populate the caller ID field with the current user’s information when they open the form.
+This only manipulates the data on the UI.
+Server-Side Script: If you need to pull additional user data from the user table (e.g., department or location), you would write a server-side script
+to query the database and return that information.
+Key Takeaways
+Client-Side Scripting: Handles form/UI interactions and manipulations. It’s more about providing real-time feedback to the user.
+Server-Side Scripting: Handles the heavy lifting behind the scenes, including data queries, workflows, and business rules.
+Understanding both is essential: Mastering both client-side and server-side scripting in ServiceNow will allow you to customize the platform to meet 
+complex business needs.
